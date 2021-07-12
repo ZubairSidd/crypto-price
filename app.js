@@ -67,7 +67,7 @@ const createCoin = async (exchangeRate = 1) => {
     coinVolume.innerHTML = `Volume : ${"<br>"}${coinData.volume}`;
     coinChange.innerHTML = `Change : ${"<br>"}${coinData.change}`;
 
-    coinPrice.innerHTML = `Price : ${coinData.price * exchangeRate}`;
+    coinPrice.innerHTML = `Price : ${"<br>"}${coinData.price * exchangeRate}`;
 
     coinImage.src = allCoins.coinImage[i];
     coinImage.width = 64;
