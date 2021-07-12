@@ -1,16 +1,50 @@
 body {
   margin: 0;
-}
-.container {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #f1e9db;
   width: 700px;
   margin: auto;
+}
+.container {
+  text-align: center;
+  width: 700px;
+  margin: auto;
+  background-color: #a39b8b;
+  border-radius: 1em;
+  padding: 1rem 0;
 }
 .coinHolder {
   text-align: center;
   display: inline-block;
   margin: 1rem;
+  padding: 1em;
+  background-color: #716a5c;
+  color: #f1e9db;
+  border-radius: 1em;
+  box-shadow: #07020d33 0px 4px 12px;
+  width: 150px;
 }
-
+.shoutout {
+  text-align: center;
+}
+#currencyLabel {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+#currency {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #f1e9db;
+  color: #07020d;
+  border: 1px solid #716a5c;
+  border-radius: 1em;
+}
+h1 {
+  padding-left: 1rem;
+  font-size: 2.25rem;
+}
 @media (max-width: 700px) {
   .container {
     width: 100%;
