@@ -7,11 +7,17 @@
     <title>Crypto Price</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
-  <body>
-    <h1>Crytocurrency Prices</h1>
+  <body class="container">
+    <main class="container">
+      <h1>Crytocurrency Prices</h1>
+      <label for="currency">Select currency: </label>
+      <select name="currencyRates" id="currency">
+        <option disabled selected>USD</option>
+      </select>
+      <section class="coinSection"></section>
+    </main>
 
-    <section class="main"></section>
-
+    <p>Powered by <a href="https://www.amdoren.com">Amdoren</a></p>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/app.js"></script>
   </body>
