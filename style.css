@@ -2,16 +2,37 @@ body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   background-color: #f1e9db;
-  width: 700px;
+  /* width: 750px; */
   margin: auto;
+}
+.navbar {
+  margin: auto;
+  width: 750px;
+  margin-bottom: 2rem;
+}
+.refreshButton {
+  float: right;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.25rem;
+  background-color: #f1e9db;
+  border-radius: 50%;
+  /* margin-bottom: 2rem; */
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.refreshButton:hover {
+  cursor: pointer;
 }
 .container {
   text-align: center;
-  width: 700px;
+  width: 750px;
   margin: auto;
   background-color: #a39b8b;
   border-radius: 1em;
   padding: 1rem 0;
+  box-shadow: #07020d33 0px 4px 12px;
 }
 .coinHolder {
   text-align: center;
@@ -21,7 +42,7 @@ body {
   background-color: #716a5c;
   color: #f1e9db;
   border-radius: 1em;
-  box-shadow: #07020d33 0px 4px 12px;
+  box-shadow: #f1e9db33 0px 4px 12px;
   width: 150px;
 }
 .shoutout {
@@ -33,18 +54,22 @@ body {
   font-weight: 400;
 }
 #currency {
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   font-size: 1.25rem;
   padding: 0.25rem 0.5rem;
   background-color: #f1e9db;
   color: #07020d;
-  border: 1px solid #716a5c;
+  /* border: 1px solid #716a5c; */
+  border: 0;
   border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 h1 {
   padding-left: 1rem;
   font-size: 2.25rem;
 }
+
 @media (max-width: 700px) {
   .container {
     width: 100%;

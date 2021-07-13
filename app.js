@@ -1,19 +1,21 @@
 const mainSection = document.querySelector(".coinSection");
 const currencySelect = document.querySelector("#currency");
+const refreshButton = document.querySelector(".refreshButton");
 let currencyRates = "";
 const coinLoc = (fileName) => {
   return `/images/${fileName}`;
 };
 
 let allCoins = {
-  coinName: ["BitCoin", "Ethereum", "DOGE Coin", "Ripple", "TRON"],
-  coinCode: ["btc", "eth", "doge", "xrp", "trx"],
+  coinName: ["BitCoin", "Ethereum", "DOGE Coin", "Ripple", "TRON", "Matic"],
+  coinCode: ["btc", "eth", "doge", "xrp", "trx", "matic"],
   coinImage: [
     coinLoc("bitcoin.svg"),
     coinLoc("ethereum.svg"),
     coinLoc("dogecoin.svg"),
     coinLoc("xrp.svg"),
     coinLoc("trx.svg"),
+    coinLoc("matic.svg"),
   ],
 };
 
@@ -71,6 +73,10 @@ const createCoin = async (exchangeRate = 1) => {
     let roundPrice = parseFloat(coinData.price * exchangeRate).toFixed(4);
     coinPrice.innerHTML = `Price : ${"<br>"}${roundPrice}`;
 
+    // coinVolume.classList.add("subHolder");
+    // coinPrice.classList.add("subHolder");
+    // coinChange.classList.add("subHolder");
+
     coinImage.src = allCoins.coinImage[i];
     coinImage.width = 64;
     coinImage.height = 64;
@@ -82,8 +88,17 @@ const createCoin = async (exchangeRate = 1) => {
 };
 
 createCoin();
+
 let selectedCurrency = 0;
 currencySelect.addEventListener("change", (e) => {
   mainSection.innerHTML = "";
-  createCoin(e.srcElement.value);
+  selectedCurrency = e.srcElement.value;
+  createCoin(selectedCurrency);
+});
+
+refreshButton.addEventListener("click", () => {
+  mainSection.innerHTML = "";
+  getData();
+  getCurrencyData();
+  createCoin(selectedCurrency);
 });
