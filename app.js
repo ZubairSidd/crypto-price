@@ -68,14 +68,14 @@ const createCoin = async (exchangeRate = 1) => {
     coinName.innerText = allCoins.coinName[i];
     let roundVolume = parseFloat(coinData.volume).toFixed(4);
     coinVolume.innerHTML = `Volume : ${"<br>"}${roundVolume}`;
-    let roundChange = parseFloat(coinData.change).toFixed(4);
+    let roundChange = parseFloat(coinData.change).toFixed(6);
     coinChange.innerHTML = `Change : ${"<br>"}${roundChange}`;
     let roundPrice = parseFloat(coinData.price * exchangeRate).toFixed(4);
     coinPrice.innerHTML = `Price : ${"<br>"}${roundPrice}`;
 
-    // coinVolume.classList.add("subHolder");
-    // coinPrice.classList.add("subHolder");
-    // coinChange.classList.add("subHolder");
+    coinVolume.classList.add("subHolder");
+    coinPrice.classList.add("subHolder");
+    coinChange.classList.add("subHolder");
 
     coinImage.src = allCoins.coinImage[i];
     coinImage.width = 64;
